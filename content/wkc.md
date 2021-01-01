@@ -1,6 +1,8 @@
 ---
 title: "WKC Camps"
 date: 2017-04-24T21:56:53+05:30
+tags: ["community", "volunteering", "education", "camp"]
+slug: "wkccamp"
 ---
 
 In 2015, a tyro entered the [WORLD KONKANI CENTER](https://vishwakonkani.org/) with no idea whatsoever. Analogous

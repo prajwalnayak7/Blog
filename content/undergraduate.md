@@ -1,6 +1,8 @@
 ---
 title: "Undergraduate"
 date: 2015-07-08T21:56:53+05:30
+tags: ["education", "college"]
+slug: "college"
 ---
 
 Life at college is the time when the teenage years end and we all dive deep into the ocean of new

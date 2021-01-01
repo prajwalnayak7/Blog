@@ -3,6 +3,8 @@ title: "Jog Falls"
 date: "2020-01-01"
 menu: ""
 description: "Journey to Jog Falls"
+tags: ["travel", "explore", "trip",]
+slug: "jogfalls"
 ---
 
 Breathtaking! A stare at the water falling from 100s of feet above the ground, gives an illusion of heaven.

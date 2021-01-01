@@ -7,6 +7,6 @@ description: "Contact the author"
 
 I'm available at prajwalnayak7@gmail.com and +919740662196.
 
-[Click to View My Resume](https://prajwalnayak7.github.io/resume/)
+[Click to View My Resume](https://prajwalnayak7.github.io/cv.pdf)
 
 [Click here to Connect via LinkedIn](https://www.linkedin.com/in/psn/)

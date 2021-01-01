@@ -1,6 +1,8 @@
 ---
 title: "MIT Manipal"
 date: 2016-08-10T21:56:53+05:30
+tags: ["education", "college"]
+slug: "mitmanipal"
 ---
 
 Soon after a hectic year of study and entrance exams, came a year with power packed experiences. I could recall from my memory, an unexpected incidence. A year ago I, while returning to my home, from temple, lost my way and ended up in the crowded Manipal Campus. At that moment I saw myself to be there as a student. Destiny aligned with my interests, got admission in one of the best college, in my favorite branch. It is later that I realized, the societal pressure that I had filled myself with during 12th std, was unnecessary. But things turned out to be good. I felt blessed to get into a college where some of the best brains from all over the country come to study. That scared me a bit, but even a few brainless people get lucky sometimes. I wanted to enjoy diversity and learn various aspects of life, so MIT was the best choice. Also it was very close to my residence. Adding to this, it also had international reputation owing to its successful alumnus. Thankfully the burden of heavy amount of fee was lightened by the scholarships I received. Preparations began, from buying new books, filling a bunch of forms to updating whatsapp status “gearing up for MIT”.
