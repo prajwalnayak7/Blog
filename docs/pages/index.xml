@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Prajwal Nayak</title>
+    <link>https://prajwalnayak7.github.io/mysite/pages/</link>
+    <description>Recent content in Pages on Prajwal Nayak</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Apr 1997 00:00:00 +0000</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/mysite/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://prajwalnayak7.github.io/mysite/pages/about/</link>
+      <pubDate>Sat, 19 Apr 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/pages/about/</guid>
+      <description>I&amp;rsquo;m a Software Engineer by profession and hustler by choice. Rightenousness and compassionate capitalism are the principles I believe in.
+Leverage of Software technology and the possibility of a resource unconstrained future excites me.
+Wanna grab a cup of coffee ☕ ? or have a small chat 🤝🏻, feel free to ping me HERE. Thanks for Visiting !! 👍🏻</description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://prajwalnayak7.github.io/mysite/pages/contact/</link>
+      <pubDate>Sat, 19 Apr 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/pages/contact/</guid>
+      <description>I&amp;rsquo;m available at prajwalnayak7@gmail.com and +919740662196.
+Click to View My Resume
+Click here to Connect via LinkedIn</description>
+    </item>
+    
+  </channel>
+</rss>

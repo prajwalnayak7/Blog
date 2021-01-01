@@ -6,10 +6,11 @@
 - git clone git@github.com:prajwalnayak7/mysite.git
 - hugo serve
 
-
-## To build and deploy
-hugo -t paper
+### To build and deploy
 ./deploy_to_gh_pages.sh 
+
+### To Add a new article
+hugo new abc.md
 
 ### Steps to create your own static website
 - brew install hugo

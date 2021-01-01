@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prajwal Nayak</title>
+    <link>https://prajwalnayak7.github.io/mysite/</link>
+    <description>Recent content on Prajwal Nayak</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Apr 1997 00:00:00 +0000</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/mysite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://prajwalnayak7.github.io/mysite/introduction/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/introduction/</guid>
+      <description>Ever-evolving snapshot of perception. Thoughts / suggestions / feedback welcome at HERE. Thank you for reading.</description>
+    </item>
+    
+    <item>
+      <title>Jog Falls</title>
+      <link>https://prajwalnayak7.github.io/mysite/travel/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/travel/</guid>
+      <description>Breathtaking! A stare at the water falling from 100s of feet above the ground, gives an illusion of heaven. The milk-ish water molecules racing to hit the ground is a mesmerizing view. Sitting on the rocks and just staring at them for hours brings tranquility. It makes one realize what true beauty is, how insignificant one is at the face of a larger creation.
+By observing the crowd, It seemed like everybody is into modeling.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://prajwalnayak7.github.io/mysite/pages/about/</link>
+      <pubDate>Sat, 19 Apr 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/pages/about/</guid>
+      <description>I&amp;rsquo;m a Software Engineer by profession and hustler by choice. Rightenousness and compassionate capitalism are the principles I believe in.
+Leverage of Software technology and the possibility of a resource unconstrained future excites me.
+Wanna grab a cup of coffee ☕ ? or have a small chat 🤝🏻, feel free to ping me HERE. Thanks for Visiting !! 👍🏻</description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://prajwalnayak7.github.io/mysite/pages/contact/</link>
+      <pubDate>Sat, 19 Apr 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/mysite/pages/contact/</guid>
+      <description>I&amp;rsquo;m available at prajwalnayak7@gmail.com and +919740662196.
+Click to View My Resume
+Click here to Connect via LinkedIn</description>
+    </item>
+    
+  </channel>
+</rss>
