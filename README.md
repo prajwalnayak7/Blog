@@ -1,8 +1,9 @@
+
 # Personal Blog Site
  
 
 ### To run locally
-- git clone
+- git clone git@github.com:prajwalnayak7/mysite.git
 - hugo serve
 
 
@@ -22,3 +23,4 @@ hugo -t paper
 hugo serve
 
 WITH hugo:alpine 🤓
+BUILD fast&cool
