@@ -1,4 +1,5 @@
-baseURL = "https://prajwalnayak7.github.io/"
+baseURL = "https://prajwalnayak7.github.io/mysite/"
 languageCode = "en-us"
 title = "Prajwal Nayak"
 theme = "paper"
+publishDir = "docs"
