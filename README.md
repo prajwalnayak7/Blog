@@ -1,8 +1,14 @@
 # Personal Blog Site
  
+
 ### To run locally
 - git clone
 - hugo serve
+
+
+## To build and deploy
+hugo -t paper
+./deploy_to_gh_pages.sh 
 
 ### Steps to create your own static website
 - brew install hugo
