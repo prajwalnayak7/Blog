@@ -1,6 +1,8 @@
 
 # Personal Blog Site
- 
+Live at: https://prajwalnayak7.github.io/
+Built using RAD SDLC Model
+
 
 ### Useful Commands
 ```
