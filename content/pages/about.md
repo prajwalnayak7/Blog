@@ -9,5 +9,5 @@ I'm a Software Engineer by profession and hustler by choice. Rightenousness and 
 
 Leverage of Software technology and the possibility of a resource unconstrained future excites me.
 
-Wanna grab a cup of coffee ☕ ? or have a small chat 🤝🏻, feel free to ping me [HERE](/contact/).
+Wanna grab a cup of coffee ☕ ? or have a small chat 🤝🏻, feel free to ping me [HERE](/pages/contact/).
 Thanks for Visiting !! 👍🏻
