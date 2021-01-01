@@ -1,5 +1,5 @@
-# Personal Blog Site - WITH hugo:alpine 🤓
-
+# Personal Blog Site
+ 
 ### To run locally
 git clone
 hugo serve
@@ -14,3 +14,5 @@ git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
 // Configure: theme="paper" in config.toml
 // Start the static server
 hugo serve
+
+- WITH hugo:alpine 🤓
