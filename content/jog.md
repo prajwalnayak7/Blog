@@ -7,6 +7,10 @@ tags: ["travel", "explore", "trip",]
 slug: "jogfalls"
 ---
 
+[🌐](https://goo.gl/maps/r2Qf1cuszVXyDU9r5)
+
+![Jog Falls View](/gif/jog.gif)
+
 Breathtaking! A stare at the water falling from 100s of feet above the ground, gives an illusion of heaven.
 The milk-ish water molecules racing to hit the ground is a mesmerizing view.
 Sitting on the rocks and just staring at them for hours brings
@@ -36,4 +40,3 @@ Fail big, fall high.
 
 Travelling is an expression of freedom, of joy, and of experiencing the
 unseen.
-
