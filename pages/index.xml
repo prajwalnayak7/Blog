@@ -6,7 +6,24 @@
     <description>Recent content in Pages on Prajwal Nayak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Apr 1997 00:00:00 +0000</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>https://prajwalnayak7.github.io/pages/project/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/pages/project/</guid>
+      <description>GitHub - Open Source Projects
+ Cyber Security - CFTR
+ Similarity between related security incidents.
+ machine learning - MySQL - Elasticsearch - hooks - shell scripts - code quality  WhatsApp Communication
+ Instant Payouts / small loans for MSMEs.
+Weekly sales report.
+ Microservices - Redis - ReactJS - Redux - Data modelling  Cash On Delivery
+ Accounting and Settlements for products paid via cash.
+ PostgreSQL - Postpaid payment - AWS S3 - Reconciliation  UPI-QR Payments</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://prajwalnayak7.github.io/pages/about/</link>
