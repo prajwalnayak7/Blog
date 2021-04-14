@@ -14,14 +14,11 @@
       
       <guid>https://prajwalnayak7.github.io/pages/project/</guid>
       <description>GitHub - Open Source Projects
- Cyber Security - CFTR
- Similarity between related security incidents.
- machine learning - MySQL - Elasticsearch - hooks - shell scripts - code quality  WhatsApp Communication
+ Caching / Notifications - CFTR
+ Led the implementation of caching across the application. Owner of notifications. Revamped the code for robustness and reduced code size by ~50%. Python best practices in package management, git pre-commit autiomatic static checks.
+ MySQL - Redis - Elasticsearch - hooks - Bash shell - Profiling  WhatsApp Communication
  Instant Payouts / small loans for MSMEs.
-Weekly sales report.
- Microservices - Redis - ReactJS - Redux - Data modelling  Cash On Delivery
- Accounting and Settlements for products paid via cash.
- PostgreSQL - Postpaid payment - AWS S3 - Reconciliation  UPI-QR Payments</description>
+Weekly sales report.</description>
     </item>
     
     <item>
@@ -31,7 +28,7 @@ Weekly sales report.
       
       <guid>https://prajwalnayak7.github.io/pages/about/</guid>
       <description>I&amp;rsquo;m a Software Engineer by profession and hustler by choice. Rightenousness and compassionate capitalism are the principles I believe in.
-Leverage of Software technology and the possibility of a resource unconstrained future excites me.
+Leverage of technology and the possibility of a resource unconstrained future excites me.
 Wanna grab a cup of coffee ☕ ? or have a small chat 🤝🏻, feel free to ping me HERE. Thanks for Visiting !! 👍🏻</description>
     </item>
     
