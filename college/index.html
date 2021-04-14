@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Under-graduate - Prajwal Nayak</title>
+    
+    <meta name="description" content="Soon after a hectic year of study and exams, began a year with power-packed experiences. I could recall a fortuitous incidence. A year ago I, while returning to my home, from the Venugopal temple, lost my way and ended up in the crowded Manipal Campus. At that moment I saw myself to be a student there in the distant hypothetical future. Destiny aligned with my interests, received admission there, in my favorite branch.">
+    <meta name="author" content="">
+    
+    <link href="https://prajwalnayak7.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/style.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://prajwalnayak7.github.io/apple-touch-icon.png">
+    <link rel="icon" href="https://prajwalnayak7.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="https://prajwalnayak7.github.io/">Prajwal Nayak</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/tags">Tags</a>
+          </li>
+          <li>
+            <a href="/pages/about/">About</a>
+          </li>
+          <li>
+            <a href="/pages/contact/">Contact Me</a>
+          </li>
+          <li>
+            <a href="/pages/project/">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Under-graduate</h1>
+    <div class="post-meta">July 8, 2015</div>
+  </header>
+  <div class="post-content"><p>Soon after a hectic year of study and exams, began a year with power-packed experiences. I could recall a fortuitous incidence. A year ago I, while returning to my home, from the Venugopal temple, lost my way and ended up in the crowded Manipal Campus. At that moment I saw myself to be a student there in the distant hypothetical future. Destiny aligned with my interests, received admission there, in my favorite branch. It is later that I realized, the typical societal pressures that I had filled myself with during 12th std, was unnecessary. But things turned out to be good. I felt blessed to get into a college where some of the best brains from all over the country come to study. That intimidated me a bit, but the fact is that it was well balanced with students in all ranges of intelligence. I yearned to enjoy diverse cultures and learn vivid aspects of life. Also, it was very close to my residence, literally a couple of minutes away. Adding to this, it also had an international reputation owing to its successful alumnus. Thankfully the burden of a heavy amount of fee was lightened by the scholarships I received. Preparations began, from buying new books, filling a bunch of forms to updating the WhatsApp status “gearing up for MIT” (well, not the Massachusetts one).</p>
+<p>A few months after the first drop of monsoon, began the first semester. I was really excited and ready for a new experience. The first week was for the faculty to introduce the bits and bones in and around the course/campus. The expectation for the first class of engineering was way too high. I could visualize the high-tech gadgets and technology miracles, like the ones in Star Trek. But the professor began the lecture with boring old 12th class concepts. Of course, there were advanced projects going on, which were beyond something which we could decipher. The new college, people, and facilities provided there balanced the disappointment of doing 13th class instead of actual “engineering”. The commitment to academics slowly started to fade. Still, people used to attend classes, to escape the heat and sleep in AC halls. Initially, it was difficult to mingle with the diverse student crowd. Smartphones were used to avoid social interactions. I could hardly manage to make new friends. But I slowly started getting better at my social skills. The thing that we loved the most was free Wi-Fi. Within no time life started getting messy, busy with assignments, internals, workshops, and most importantly our new laptops. Then it was time for the technical fest. Since I was an amateur, I decided to volunteer for the Hospitality category, I thought it would be challenging, but I had nothing more to do than deliver a packet of lays and a bottle of water to the concerned organizers. But the fun thing was to look at people filling the campus with noise and their colorful shirts.</p>
+<p>The beginning of New Year marked the starting point of the next academic cycle. Chapters began, concepts were thrown at us, to be grasped. I realized that engineering was not what people would label “difficult”. It’s a really chill life, provided one could manage to learn every day. The ratio of self-study to that of classroom learning is way too high in engineering. During weekends and in my free time, I used to do online courses to expand my technical skills. And sometimes listen to music, have food, all at the same time. Being aware of the skills that would make my personality better, I started working on it at an early stage. I was pathetic in talking to people. I thought that there was some problem with my throat or mouth. But soon realized that the mind is what makes a difference. In response to it, I started spending some time doing yoga and trying to meditate. Marena was the place that I loved the most. Whether it is for recreation, sports, games, or gym, it was the best time spent on any given day. In spite of all these, we had to store the data from the books in our brains. There were occasional errors raised from my brain memory “information overflow, out of memory error”. The darkness of academic life started to disappear once the news of Revels- the cultural fest, started to sprout. This time I wanted to take bigger challenges, so thought of joining the system admin team as a volunteer. But again no work to do, but get a free food coupon. The fest undoubtedly gives the best memories for the students. One could find music all around, people scattered, dancing, chatting, and having fun. The standup comedy, music bands late at night, gives a heart full of entertainment. It reminded me, not to take life so seriously. Once again the dark days were coming, English speech. I recalled the past experience of giving a speech at the WKC camp, started preparing and practicing it. Finally gave a strong speech with confidence, without a pause and the same audience that had mocked me in the past could not resist applauding me. Still, something was missing in my college life. I’ve been playing video games from when I was in high school. Which invited criticisms from my relatives and society in general. I proved them wrong, scored a huge percentage in my 12th class boards. I wanted to join a club, a few had already rejected me. The Gaming Club of MIT was about to hold their recruitments. Luckily passed the interviews and joined the game dev team. Finally settled as a MITian. Not a typical one, who smokes and drinks. But kind of a nerd, who is shy even to talk to the opposite gender. Soon the dark clouds were to appear. It was time to store the text in our brains and retrieve it on the papers. I spent a lot of time during exams helping out my friends who had problems with academics. During the exams, time appeared to have moved at a pace of a bullock cart. The holidays began and time apparently flew like a  bullet train.</p>
+<p>The entire year was filled with mixed experiences and emotions. But in the end, it was all good. Society considers the 12th class as the turning point, where those who study well get ‘good life’ others are failures. I realized it was absolutely misleading. A good college provides good opportunities and facilities. It never guarantees success. Typical ordinary people strive to get a good job, by getting a degree. That’s where things go wrong. I understood that if one has the passion to learn in his heart, everything becomes simple. Short-term academic setbacks didn’t disturb me much. Because I believed that numbers could make no difference (though it does in the financial markets). It is the ability and the character that makes. I developed a keen interest in listening to speeches, though I had no intent in giving one. Internet thought me more than classrooms. The library was meant for serious study. But for us, it
+was for free AC and Wi-Fi. Going late to class and early to the library was my favorite tradition. Days pass and things change but the memory remains, “mighty mighty yummMIT”.</p>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://prajwalnayak7.github.io/tags/education">education</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/college">college</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="https://prajwalnayak7.github.io/">Prajwal Nayak</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="https://prajwalnayak7.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+
