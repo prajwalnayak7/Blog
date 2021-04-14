@@ -9,7 +9,7 @@ Built using RAD SDLC Model
 To run locally :
 
 - git clone git@github.com:prajwalnayak7/mysite.git
-- hugo server
+- hugo server --verbose  --disableFastRender
 
 
 To build and deploy : 
