@@ -1,12 +1,11 @@
----
+<!-- ---
 title: "WKC Camps"
 date: 2017-04-24T21:56:53+05:30
 tags: ["community", "volunteering", "education", "camp"]
 slug: "wkccamp"
 ---
 
-In 2015, a tyro entered the [WORLD KONKANI CENTER](https://vishwakonkani.org/) with no idea whatsoever. Analogous
-to a stone, without an identity or pride towards where it came from. My understanding
+In 2015, a tyro entered the [WORLD KONKANI CENTER](https://vishwakonkani.org/) with no idea whatsoever. My understanding
 and perspective were limited to a few people and a small geographic area. I was a nice
 and nerdy person. But, I had to buck up, I had to work in the right direction to let my
 inner talents sprout. It is an undeniable fact that WKC became a catalyst in the
@@ -208,4 +207,4 @@ compassionate capitalism. The philosophy of helping ourselves and giving it to o
 requires a certain degree of evolutionary mind. My community is one such where giving
 is a culture. I feel proud and privileged to be born in this community and one day I shall
 make my community proud of what it has given me. Konkani shall not be limited to my
-biodata, it shall remain in my heart and mind.
+biodata, it shall remain in my heart and mind. -->

@@ -10,10 +10,12 @@ description: "Projects / Portfolio"
 
 ---
 
-__Cyber Security - CFTR__
-> Similarity between related security incidents.
+__Caching & Notifications - CFTR__
+> Led the implementation of caching across the application.
+> Owner of notifications. Revamped the code for robustness and reduced code size by ~50%.
+> Python best practices in package management, git pre-commit autiomatic static checks.
 ```
-machine learning - MySQL - Elasticsearch - hooks - shell scripts - code quality 
+MySQL - Redis - Elasticsearch - hooks - Bash shell - Profiling 
 ```
 
 ---
@@ -22,15 +24,7 @@ __WhatsApp Communication__
 > Instant Payouts / small loans for MSMEs.\
 > Weekly sales report.
 ```
-Microservices - Redis - ReactJS - Redux - Data modelling
-```
-
----
-
-__Cash On Delivery__
-> Accounting and Settlements for products paid via cash.
-```
-PostgreSQL - Postpaid payment - AWS S3 - Reconciliation
+Microservices  - ReactJS - Redux - Data modelling - PostgreSQL - AWS S3 - Reconciliation
 ```
 
 ---
@@ -38,15 +32,7 @@ PostgreSQL - Postpaid payment - AWS S3 - Reconciliation
 __UPI-QR Payments__
 > QR Code based UPI payments. \
 > Digital payments for offline merchants.
-```
- RSA encryption - Webhooks - Async tasks batches - Celery
-```
-
----
-
-__Marketplace APIs__
-
 > Restful APIs for marketplace customers to collect and distribute (settlement) payments.
 ```
-Django - Python - REST - ORM
+Django - Python - REST - RSA encryption - Webhooks - Async tasks batches - Celery
 ```

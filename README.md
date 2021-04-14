@@ -9,15 +9,20 @@ Built using RAD SDLC Model
 To run locally :
 
 - git clone git@github.com:prajwalnayak7/mysite.git
-- hugo serve
+- hugo server
 
 
 To build and deploy : 
-./deploy_to_gh_pages.sh 
+./publish_to_ghpages.sh 
 
 
 To Add a new article :
 hugo new abc.md
+
+
+Solutions for common issues:
+- hugo mod clean
+- git submodule init ; git submodule update
 
 
 Steps to create your own static website :
