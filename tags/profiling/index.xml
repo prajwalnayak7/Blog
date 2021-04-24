@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>profiling on Prajwal Nayak</title>
+    <link>https://prajwalnayak7.github.io/tags/profiling/</link>
+    <description>Recent content in profiling on Prajwal Nayak</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Feb 2021 14:46:33 +0530</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/tags/profiling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visibility and Profiling in Django (Python3)</title>
+      <link>https://prajwalnayak7.github.io/visibility-django/</link>
+      <pubDate>Wed, 24 Feb 2021 14:46:33 +0530</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/visibility-django/</guid>
+      <description>The &amp;lsquo;batteries included&amp;rsquo; python framework will required a few tools to get insights into the application performance and other metrics.
+This article is by no means exhaustive. But, it serves as a good start and simplifies geting started.
+ ncalls is the total number of calls that the function makes. tottime is the total time spent in the function alone. cumtime is the total time spent in the function plus all the functions that it in-turn calls.</description>
+    </item>
+    
+  </channel>
+</rss>

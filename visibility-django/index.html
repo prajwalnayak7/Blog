@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Prajwal's blog</title>
+    
+    <meta name="description" content="The &lsquo;batteries included&rsquo; python framework will required a few tools to get insights into the application performance and other metrics.
+This article is by no means exhaustive. But, it serves as a good start and simplifies geting started.
+ ncalls is the total number of calls that the function makes. tottime is the total time spent in the function alone. cumtime is the total time spent in the function plus all the functions that it in-turn calls.">
+    <meta name="author" content="">
+    
+    <link href="https://prajwalnayak7.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/style.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://prajwalnayak7.github.io/apple-touch-icon.png">
+    <link rel="icon" href="https://prajwalnayak7.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="https://prajwalnayak7.github.io/">Home</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/tags">Tags</a>
+          </li>
+          <li>
+            <a href="/pages/about/">About</a>
+          </li>
+          <li>
+            <a href="/pages/contact/">Contact Me</a>
+          </li>
+          <li>
+            <a href="/pages/project/">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Visibility and Profiling in Django (Python3)</h1>
+    <div class="post-meta">February 24, 2021</div>
+  </header>
+  <div class="post-content"><p>The &lsquo;batteries included&rsquo; python framework will required a few tools to get insights into the application performance and other metrics.</p>
+<p>This article is by no means exhaustive. But, it serves as a good start and simplifies geting started.</p>
+<blockquote>
+<p><code>ncalls</code> is the total number of calls that the function makes.
+<code>tottime</code> is the total time spent in the function alone.
+<code>cumtime</code> is the total time spent in the function plus all the functions that it in-turn calls.
+<code>percall</code> is the quotient of tot/cum<code>time</code> divided by <code>ncalls</code></p>
+</blockquote>
+<hr>
+<ul>
+<li><a href="https://docs.python.org/3/library/profile.html">cProfile</a></li>
+</ul>
+<p>A python package for analysing the function performance as well as can be used along with the django dev server.</p>
+<p>For instance, guess which is better? (Both give the same output)</p>
+<p><code>&quot;,&quot;.join(abc)</code></p>
+<p>OR</p>
+<p><code>str(abc)[1:-1]</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> cProfile<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#39;&#34;,&#34;.join(abc)&#39;</span>)
+         <span style="color:#ae81ff">4</span> function calls <span style="color:#f92672">in</span> <span style="color:#ae81ff">0.000</span> seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span>:<span style="color:#ae81ff">1</span>(<span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>)
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> {built<span style="color:#f92672">-</span><span style="color:#f92672">in</span> method builtins<span style="color:#f92672">.</span><span style="color:#66d9ef">exec</span>}
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> {method <span style="color:#e6db74">&#39;disable&#39;</span> of <span style="color:#e6db74">&#39;_lsprof.Profiler&#39;</span> objects}
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> {method <span style="color:#e6db74">&#39;join&#39;</span> of <span style="color:#e6db74">&#39;str&#39;</span> objects}
+
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> cProfile<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#39;str(abc)[1:-1]&#39;</span>)
+         <span style="color:#ae81ff">3</span> function calls <span style="color:#f92672">in</span> <span style="color:#ae81ff">0.000</span> seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> <span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span>:<span style="color:#ae81ff">1</span>(<span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>)
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> {built<span style="color:#f92672">-</span><span style="color:#f92672">in</span> method builtins<span style="color:#f92672">.</span><span style="color:#66d9ef">exec</span>}
+        <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span>    <span style="color:#ae81ff">0.000</span> {method <span style="color:#e6db74">&#39;disable&#39;</span> of <span style="color:#e6db74">&#39;_lsprof.Profiler&#39;</span> objects}
+</code></pre></div><p>Comand to monitor along with the Django Dev server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m cProfile -o profile_output manage.py runserver
+cprofilev -f profile_output
+</code></pre></div><hr>
+<ul>
+<li><a href="https://django-extensions.readthedocs.io/en/latest/">django-extensions</a></li>
+</ul>
+<p>It a heavyweight package to be included only in dev environments. This extends django capabilities in terms of profiling, better shell, schema generator and many other missing django features one would look for.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Run the dev server with profiling enabled.</span>
+python manage.py runprofileserver --use-cprofile --prof-path<span style="color:#f92672">=</span>/tmp/my-profile-data
+<span style="color:#75715e"># Generate the output</span>
+snakeviz /tmp/my-profile-data/
+</code></pre></div><p>In addition to it, the package also provides many cool commands, some of them listed below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Dev server with cleaner logs output and faster reloads</span>
+python manage.py runserver_plus
+<span style="color:#75715e"># Shell with hot reload, automatic imports, translate ORM queries to SQL query</span>
+python manage.py shell_plus --notebook --print-sql
+<span style="color:#75715e"># Generate the Model schema of apps</span>
+python manage.py graph_models app_name -o file_name.png
+python manage.py graph_models -a --disable-abstract-fields --group-models -g --arrow-shape curve --theme original -o complete_schema.png
+<span style="color:#75715e"># Generate basic admin panels</span>
+python manage.py admin_generator Generate basic admin panels
+<span style="color:#75715e"># List all the url configs</span>
+python manage.py show_urls | wc -l
+<span style="color:#75715e"># List all the models</span>
+python manage.py list_model_info --db-type
+</code></pre></div><hr>
+<ul>
+<li><a href="https://github.com/jazzband/django-silk">Silk</a></li>
+</ul>
+<p>In an API driven world, this tool comes handy being one of the most powerful OSS for django out there.</p>
+<p>SetUp in django settings file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INSTALLED_APPS <span style="color:#f92672">=</span> [
+    <span style="color:#960050;background-color:#1e0010">‘</span>silk<span style="color:#960050;background-color:#1e0010">’</span>
+]
+MIDDLEWARE <span style="color:#f92672">=</span> [
+    <span style="color:#e6db74">&#39;silk.middleware.SilkyMiddleware&#39;</span>,
+]
+urlpatterns <span style="color:#f92672">=</span> [
+    url(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^silk/&#39;</span>, include(<span style="color:#e6db74">&#39;silk.urls&#39;</span>, namespace<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;silk&#39;</span>)),
+]
+</code></pre></div><p>Dashboard visible at : <code>http://localhost:8000/silk/</code>
+Be sure to proxy the request in case routing via Nginx or any loadbalancers.</p>
+<p>Catch:
+Silk understands the application from a middleware perspective. There could be scenarios for instance where changes in the ORM layer may proxy the request to a cache server. Silk in such cases won&rsquo;t be able to track the actual queries that are hitting the Database as opposed to the queries that are written in the application.
+Ways to verify this: print the queries in
+<code>venv/lib/pythonx.x/site-packages/django/db/backends/mysql/base.py</code>
+OR
+number of queries made in the DB connection
+<code>from django.db import connection; print(len(connection.queries))</code></p>
+<hr>
+<ul>
+<li><a href="https://github.com/jazzband/django-debug-toolbar">django-debug-toolbar</a></li>
+</ul>
+<p>Another nice tool endorsed in the Django official documentation. Provides a detailed breakup of the queries.</p>
+<hr>
+<p>It is advisible to have a <code>env</code> flag to enable or disable the configs related the profiling tools to avoid repetitive updates and better developer experience.</p>
+<blockquote>
+<p>The average network latency in the United States is about 200ms. Leaving a small room for the API&rsquo;s to make their way before the user is turned-off.</p>
+</blockquote>
+<blockquote>
+<p>Avoid network calls as much as possible, joins between large tables, unused secondary indexes, indexes with abysmal cardinality.</p>
+</blockquote>
+<blockquote>
+<p>Everything is a trade-off, in the world of bits and atoms.</p>
+</blockquote>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://prajwalnayak7.github.io/tags/tech">tech</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/django">django</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/profiling">profiling</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="https://prajwalnayak7.github.io/">Prajwal Nayak</a></span>
+  <span>&middot;</span>
+  <span>Made with in 💚 with 🔥 Life</a>️</span>
+  <span>&middot;</span>
+  <span> <a href="https://www.linkedin.com/in/psn/" rel="noopener" target="_blank">LinkedIn</a></span>
+</footer>
+<script src="https://prajwalnayak7.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+
