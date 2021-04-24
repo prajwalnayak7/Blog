@@ -1,5 +1,5 @@
 ---
-title: "Under-graduate"
+title: "UnderGraduate"
 date: 2015-07-08T21:56:53+05:30
 tags: ["education", "college"]
 slug: "college"
