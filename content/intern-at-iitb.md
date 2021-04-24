@@ -1,5 +1,5 @@
 ---
-title: "Intern at IIT Bombay"
+title: "Intern at IIT-B"
 date: 2018-04-24T16:30:20+05:30
 tags: ["education", "college", "intern"]
 draft: false

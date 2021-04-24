@@ -1,9 +1,12 @@
 ---
 title: "Visibility and Profiling in Django (Python3)"
 date: 2021-02-24T14:46:33+05:30
+menu: ""
+description: "django python profiling"
 tags: ["tech", "django", "profiling"]
-draft: false
+slug: "visibility-django"
 ---
+
 
 The 'batteries included' python framework will required a few tools to get insights into the application performance and other metrics.
 

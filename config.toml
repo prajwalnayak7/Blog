@@ -4,7 +4,6 @@ title = "Prajwal Nayak"
 theme = "paper"
 
 [taxonomies]
-    category = "categories"
     tag = "tags"
 [[menu.main]]
     name = "Tags"

@@ -1,0 +1,26 @@
+
+{{ partial "header.html" . }}
+
+<section>
+    <ul>
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+        <!-- <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}"><b>{{ $taxonomyname }}</b></a> -->
+          
+          <ul>
+            {{ range $key, $value := $taxonomy }}
+            &nbsp;
+            <li> <p style="color:rgb(253, 86, 86)"><i>{{ $key }}</i> </p></li>
+            &nbsp;
+                  <ul>
+                  {{ range $value.Pages }}
+                      <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                  {{ end }}
+                  </ul>
+            {{ end }}
+          </ul>
+          
+      {{ end }}
+    </ul>
+  </section>
+
+{{ partial "footer.html" . }}

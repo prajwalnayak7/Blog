@@ -10,7 +10,8 @@ To run locally :
 
 - git clone git@github.com:prajwalnayak7/mysite.git
 - hugo server --verbose  --disableFastRender
-- Replace the theme html files with the ones in archive
+- Replace the theme html files with the ones in archive (as we need customize the theme linked via gitmodule)
+- Add taxonomy (tags) i.e cp archive/taxonomy layouts/taxonomy
 
 
 To build and deploy : 
