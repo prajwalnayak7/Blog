@@ -3,7 +3,7 @@ title: "Visibility and Profiling in Django (Python3)"
 date: 2021-02-24T14:46:33+05:30
 menu: ""
 description: "django python profiling"
-tags: ["tech", "django", "profiling"]
+tags: ["tech", "django", "python", "profiling"]
 slug: "visibility-django"
 ---
 
