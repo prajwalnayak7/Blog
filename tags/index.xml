@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Prajwal Nayak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Feb 2021 14:46:33 +0530</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 08:25:33 +0530</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>django</title>
       <link>https://prajwalnayak7.github.io/tags/django/</link>
-      <pubDate>Wed, 24 Feb 2021 14:46:33 +0530</pubDate>
+      <pubDate>Mon, 01 Mar 2021 08:25:33 +0530</pubDate>
       
       <guid>https://prajwalnayak7.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>https://prajwalnayak7.github.io/tags/package/</link>
+      <pubDate>Mon, 01 Mar 2021 08:25:33 +0530</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/tags/package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://prajwalnayak7.github.io/tags/python/</link>
+      <pubDate>Mon, 01 Mar 2021 08:25:33 +0530</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>https://prajwalnayak7.github.io/tags/tech/</link>
+      <pubDate>Mon, 01 Mar 2021 08:25:33 +0530</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
@@ -22,15 +49,6 @@
       <pubDate>Wed, 24 Feb 2021 14:46:33 +0530</pubDate>
       
       <guid>https://prajwalnayak7.github.io/tags/profiling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tech</title>
-      <link>https://prajwalnayak7.github.io/tags/tech/</link>
-      <pubDate>Wed, 24 Feb 2021 14:46:33 +0530</pubDate>
-      
-      <guid>https://prajwalnayak7.github.io/tags/tech/</guid>
       <description></description>
     </item>
     

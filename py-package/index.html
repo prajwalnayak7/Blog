@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Prajwal's blog</title>
+    
+    <meta name="description" content="Managing external package dependencies is by default done via requirements.txt file, using pip freeze &gt; requirements.txt command.
+But, What&rsquo;s the problem?
+Lack of isolation between local environment and the packages required by the application: pip freeze picks up all the packages in the local python environment instead of only the ones that are actually needed by the app.
+This includes the ones which we moght have installed just for exploring a new tool or profiling or any other individual purpose.">
+    <meta name="author" content="">
+    
+    <link href="https://prajwalnayak7.github.io/an-old-hope.min.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/style.css" rel="stylesheet">
+    <link href="https://prajwalnayak7.github.io/custom.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://prajwalnayak7.github.io/apple-touch-icon.png">
+    <link rel="icon" href="https://prajwalnayak7.github.io/favicon.ico">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+    
+    <script>
+      function setTheme() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.body.classList.add('dark');
+          return;
+        }
+
+        const time = new Date();
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then((res) => res.json())
+            .then((data) => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="single">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <p class="logo"><a href="https://prajwalnayak7.github.io/">Home</a></p>
+        <ul class="menu">
+          <li>
+            <a href="/tags">Tags</a>
+          </li>
+          <li>
+            <a href="/pages/about/">About</a>
+          </li>
+          <li>
+            <a href="/pages/contact/">Contact Me</a>
+          </li>
+          <li>
+            <a href="/pages/project/">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Python package management</h1>
+    <div class="post-meta">March 1, 2021</div>
+  </header>
+  <div class="post-content"><p>Managing external package dependencies is by default done via <code>requirements.txt</code> file, using <code>pip freeze &gt; requirements.txt</code> command.</p>
+<p><em>But, What&rsquo;s the problem?</em></p>
+<h3 id="lack-of-isolation-between-local-environment-and-the-packages-required-by-the-application"><strong>Lack of isolation between local environment and the packages required by the application:</strong></h3>
+<p>pip freeze picks up all the packages in the local python environment instead of only the ones that are actually needed by the app.</p>
+<p>This includes the ones which we moght have installed just for exploring a new tool or profiling or any other individual purpose. But, we do not intend to make those a neccessity for the application where other contributors might also have to install those dependencies.</p>
+<p>Its good to separate developer dependencies with the application dependencies.</p>
+<h3 id="lack-of-multi-level-dependency-management"><strong>Lack of multi-level dependency management:</strong></h3>
+<p>Application A depends on package B which might in-turn depend on  package C &amp; D and so on..</p>
+<p>Consider the below scenario:
+A fresh setup, with the below initial state</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#960050;background-color:#1e0010">❯</span> pip list
+Package    Version
+<span style="color:#f92672">----------</span> <span style="color:#f92672">-------</span>
+pip        <span style="color:#ae81ff">20.2</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span>
+setuptools <span style="color:#ae81ff">50.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>
+wheel      <span style="color:#ae81ff">0.35</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Lets install a package say django and pip freeze. Now wee see that there are 3 addtional packages which are also added to requirements.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#960050;background-color:#1e0010">❯</span> cat requirements<span style="color:#f92672">.</span>txt
+asgiref<span style="color:#f92672">==</span><span style="color:#ae81ff">3.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>
+Django<span style="color:#f92672">==</span><span style="color:#ae81ff">3.2</span>
+pytz<span style="color:#f92672">==</span><span style="color:#ae81ff">2021.1</span>
+sqlparse<span style="color:#f92672">==</span><span style="color:#ae81ff">0.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Now, uninstall django and pip freeze again. We expecte an empty file, didn&rsquo;t we?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#960050;background-color:#1e0010">❯</span> cat requirements<span style="color:#f92672">.</span>txt
+asgiref<span style="color:#f92672">==</span><span style="color:#ae81ff">3.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>
+pytz<span style="color:#f92672">==</span><span style="color:#ae81ff">2021.1</span>
+sqlparse<span style="color:#f92672">==</span><span style="color:#ae81ff">0.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>This is where the drawback surfaces, where in some cases too many unwanted packages might stay when not needed. Developers will have a hard time finding out which one&rsquo;s are not.</p>
+<p><em>Taking inspiration from Go (go.mod, go.sum)</em></p>
+<p><em>What&rsquo;s the better way?</em></p>
+<p>Isolate the virtual env packages, first level dependencies and second level dependencies. Using tools like <code>pip-tools</code> for example we can specify the application specific requiremnts in a new file <code>requirements.in</code> and use the command<code>pip-compile requirements.in</code>. This will update the actual file maintaining the requirements without touching it directly. May not sound so significant for smaller projects but imagine the dependency tree in case of 100s of packages in monoliths !!</p>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://prajwalnayak7.github.io/tags/tech">tech</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/python">python</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/package">package</a></li>
+      <li><a href="https://prajwalnayak7.github.io/tags/django">django</a></li>
+    </ul>
+  </footer>
+  
+</article></main>
+<footer class="footer">
+  <span>&copy; 2021 <a href="https://prajwalnayak7.github.io/">Prajwal Nayak</a></span>
+  <span>&middot;</span>
+  <span>Made with in 💚 with 🔥 Life</a>️</span>
+  <span>&middot;</span>
+  <span> <a href="https://www.linkedin.com/in/psn/" rel="noopener" target="_blank">LinkedIn</a></span>
+</footer>
+<script src="https://prajwalnayak7.github.io/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

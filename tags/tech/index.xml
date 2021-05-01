@@ -6,7 +6,19 @@
     <description>Recent content in tech on Prajwal Nayak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Feb 2021 14:46:33 +0530</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 08:25:33 +0530</lastBuildDate><atom:link href="https://prajwalnayak7.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python package management</title>
+      <link>https://prajwalnayak7.github.io/py-package/</link>
+      <pubDate>Mon, 01 Mar 2021 08:25:33 +0530</pubDate>
+      
+      <guid>https://prajwalnayak7.github.io/py-package/</guid>
+      <description>Managing external package dependencies is by default done via requirements.txt file, using pip freeze &amp;gt; requirements.txt command.
+But, What&amp;rsquo;s the problem?
+Lack of isolation between local environment and the packages required by the application: pip freeze picks up all the packages in the local python environment instead of only the ones that are actually needed by the app.
+This includes the ones which we moght have installed just for exploring a new tool or profiling or any other individual purpose.</description>
+    </item>
+    
     <item>
       <title>Visibility and Profiling in Django (Python3)</title>
       <link>https://prajwalnayak7.github.io/visibility-django/</link>
